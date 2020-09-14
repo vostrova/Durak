@@ -1,9 +1,6 @@
 import java.util.ArrayList;
 
-/**
- * @author A.Vostrova
- * 
- */
+
 
 public class Deck {
 
