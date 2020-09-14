@@ -9,17 +9,17 @@ public class Player {
 		cards = new ArrayList<Card>();
 	}
 
-//adds card to player's cards
+        //adds card to player's cards
 	public void addCard(Card card) {
 		cards.add(card);
 	}
 
-//returns number of player's cards
+	//returns number of player's cards
 	public int getNumOfCards() {
 		return cards.size();
 	}
 
-//returns the index of the smallest card of the ArrayList of cards
+	//returns the index of the smallest card of the ArrayList of cards
 	public int getTheSmallest(ArrayList<Card> cardArray) {
 		int i = 0;
 		int minValue = 15;
