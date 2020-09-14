@@ -1,4 +1,6 @@
 public class Card {
+	
+	
 
 	// attributes
 	private String suit;
