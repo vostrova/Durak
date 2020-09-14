@@ -1,5 +1,10 @@
 import java.util.Random;
 
+/**
+ * @author A.Vostrova
+ * 
+ */
+
 public class Durak {
 
 	// Attributes
