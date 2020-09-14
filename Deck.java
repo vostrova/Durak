@@ -11,7 +11,7 @@ public class Deck {
 	ArrayList<Card> deck;
 	String[] suits = { "diamonds", "clubs", "hearts", "spades" };
 
-//constructor
+        //constructor
 	public Deck() {
 		deck = new ArrayList<Card>();
 		int count = 0;
@@ -31,12 +31,12 @@ public class Deck {
 		return cardToDelete;
 	}
 
-//returns the number of cards in the deck
+        //returns the number of cards in the deck
 	public int getNumOfCards() {
 		return deck.size();
 	}
 
-//returns true if the deck is empty
+        //returns true if the deck is empty
 	public boolean isEmpty() {
 		if (deck.size() != 0) {
 			return false;
