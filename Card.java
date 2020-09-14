@@ -4,7 +4,7 @@ public class Card {
 	private String suit;
 	private int value;
 
-//constructor
+       //constructor
 	public Card(String suit, int value) {
 		this.suit = suit;
 		this.value = value;
