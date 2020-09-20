@@ -1,3 +1,9 @@
+/**
+ * @author A.Vostrova
+ * 
+ */
+
+
 public class Card {
 	
 	
