@@ -66,7 +66,7 @@ public class Durak {
 				player1 = playerCur;
 			}
 			roundCount++;
-			// You have no cards? You won. Game over.
+			// You have no cards? Congratulations. You won. Game over.
 			if (deck.isEmpty() && player1.getNumOfCards() == 0 && player2.getNumOfCards() != 0) {
 				System.out.println("Player 2 is Durak.");
 				gameOver = true;
@@ -75,6 +75,8 @@ public class Durak {
 				System.out.println("Player 1 is Durak.");
 				gameOver = true;
 			}
+			
+			//Both of you have no cards? No one is Durak. Game over.
 			if (deck.isEmpty() && player2.getNumOfCards() == 0 && player1.getNumOfCards() == 0) {
 				System.out.println("No one is Durak.");
 				gameOver = true;
