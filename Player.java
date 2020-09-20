@@ -88,7 +88,7 @@ public class Player {
 			cards.remove(index);
 			return possibleCards.get(getTheSmallest(possibleCards));
 		} else {
-			if (!attackCard.getSuit().equals(trump)) {
+			if (!attackCard.getSuit().equals(trump) && trumpCards.size()!=0) {
 				Card trumpCard = trumpCards.get(getTheSmallest(trumpCards));
 				int index = findInCards(trumpCard);
 				cards.remove(index);
