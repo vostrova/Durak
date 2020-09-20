@@ -1,5 +1,11 @@
 import java.util.ArrayList;
 
+/**
+ * @author A.Vostrova
+ * 
+ */
+
+
 public class Player {
 	// Attributes
 	ArrayList<Card> cards;
