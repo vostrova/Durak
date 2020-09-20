@@ -75,6 +75,10 @@ public class Durak {
 				System.out.println("Player 1 is Durak.");
 				gameOver = true;
 			}
+			if (deck.isEmpty() && player2.getNumOfCards() == 0 && player1.getNumOfCards() == 0) {
+				System.out.println("No one is Durak.");
+				gameOver = true;
+			}
 		}
 
 	}
