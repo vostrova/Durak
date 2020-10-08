@@ -64,7 +64,7 @@ public class Player {
 		return i;
 	}
 
-	// returns the cards that player attacks with
+	// returns the card that player attacks with
 	public Card attack(String trump) {
 		ArrayList<Card> trumpCards = new ArrayList<Card>();
 		ArrayList<Card> nonTrumpCards = new ArrayList<Card>();
