@@ -9,23 +9,33 @@ import java.util.ArrayList;
 public class Player {
 	// Attributes
 	ArrayList<Card> cards;
+	String name;
+
 
 	// Constructor
-	public Player() {
+	public Player(String name) {
 		cards = new ArrayList<Card>();
+		this.name=name;
 	}
 
-        //adds card to player's cards
+//adds card to player's cards
 	public void addCard(Card card) {
 		cards.add(card);
 	}
 
-	//returns number of player's cards
+//returns number of player's cards
 	public int getNumOfCards() {
 		return cards.size();
 	}
+	
+	//returns player's name
+		public String getName() {
+			return name;
+		}
+	
+	
 
-	//returns the index of the smallest card of the ArrayList of cards
+//returns the index of the smallest card of the ArrayList of cards
 	public int getTheSmallest(ArrayList<Card> cardArray) {
 		int i = 0;
 		int minValue = 15;
@@ -37,6 +47,7 @@ public class Player {
 			}
 			i++;
 		}
+		
 		return minInd;
 
 	}
@@ -75,19 +86,35 @@ public class Player {
 		cards.remove(index);
 		return nonTrumpCard;
 	}
-
-	// returns card that player defends with
-	public Card defend(Card attackCard, String trump) {
+	
+	public ArrayList<Card> getPossibleCards(Card attackCard, String trump){
 		ArrayList<Card> possibleCards = new ArrayList<Card>();
-		ArrayList<Card> trumpCards = new ArrayList<Card>();
 		for (Card card : cards) {
 			if (card.getValue() > attackCard.getValue() && card.getSuit().equals(attackCard.getSuit())) {
 				possibleCards.add(card);
 			}
 			if (card.getSuit().equals(trump)) {
-				trumpCards.add(card);
+				possibleCards.add(card);
 			}
 		}
+		return possibleCards;
+		
+	}
+
+	// returns card that player defends with
+	public Card defend(Card attackCard, String trump) {
+		ArrayList<Card> allPossibleCards = getPossibleCards(attackCard, trump);
+		ArrayList<Card> possibleCards = new ArrayList<Card>();
+		ArrayList<Card> trumpCards = new ArrayList<Card>();
+		
+		for(Card card: allPossibleCards) {
+			if(card.getSuit().equals(trump)) {
+				trumpCards.add(card);
+			} else {
+				possibleCards.add(card);
+			}
+		}
+
 		if (possibleCards.size() != 0) {
 			Card possibleCard = possibleCards.get(getTheSmallest(possibleCards));
 			int index = findInCards(possibleCard);
