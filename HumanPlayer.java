@@ -15,7 +15,7 @@ public class HumanPlayer extends Player {
 		
 	}
 
-	// returns the cards that player attacks with
+	// returns the card that player attacks with
 	public Card attack(String trump) {
 		int num = 1;
 		for (Card card : cards) {
