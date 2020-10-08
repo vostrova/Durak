@@ -1,6 +1,11 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * @author A.Vostrova
+ * 
+ */
+
 public class HumanPlayer extends Player {
 	
 	
