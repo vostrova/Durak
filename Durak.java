@@ -14,8 +14,8 @@ public class Durak {
 
 	// Constructor
 	public Durak() {
-		player1 = new Player();
-		player2 = new Player();
+		player1 = new Player("Computer");
+		player2 = new HumanPlayer("Human");
 		deck = new Deck();
 	}
 
@@ -66,23 +66,33 @@ public class Durak {
 				player1 = playerCur;
 			}
 			roundCount++;
-			// You have no cards? Congratulations. You won. Game over.
+			// You have no cards? You won. Game over.
 			if (deck.isEmpty() && player1.getNumOfCards() == 0 && player2.getNumOfCards() != 0) {
-				System.out.println("Player 2 is Durak.");
+				if(player1.getName().equals("Computer")) {
+					System.out.println("You lost.");
+				}
+				else {
+					System.out.println("You won.");
+				}
 				gameOver = true;
 			}
 			if (deck.isEmpty() && player2.getNumOfCards() == 0 && player1.getNumOfCards() != 0) {
-				System.out.println("Player 1 is Durak.");
+				if(player2.getName().equals("Computer")) {
+					System.out.println("You lost.");
+				}
+				else {
+					System.out.println("You won.");
+				}
 				gameOver = true;
 			}
-			
-			//Both of you have no cards? No one is Durak. Game over.
 			if (deck.isEmpty() && player2.getNumOfCards() == 0 && player1.getNumOfCards() == 0) {
 				System.out.println("No one is Durak.");
 				gameOver = true;
 			}
+			
 		}
 
 	}
 
 }
+
