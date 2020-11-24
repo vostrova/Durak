@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collections;
+
 
 /**
  * @author A.Vostrova
@@ -25,6 +27,7 @@ public class Deck {
 				count++;
 			}
 		}
+		Collections.shuffle(deck);
 	}
 
 	// deletes card from the deck
